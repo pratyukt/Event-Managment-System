@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Venues = require('./Venues');
 
 const eventSchema = new mongoose.Schema({
     id: String,
@@ -11,7 +12,15 @@ const eventSchema = new mongoose.Schema({
         type: String,
         default: null
     },
-    venueid: String,
+    venueid: {
+        type:String,
+        ref:"Venues",
+        default: "online",
+    },
+    createdBy: {
+        type: String,
+        default: "admin"
+    },
     startDate: {
         type: Date,
         default: new Date()

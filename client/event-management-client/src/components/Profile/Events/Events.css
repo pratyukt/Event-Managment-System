@@ -1,0 +1,31 @@
+.Eventsscontainer{
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+
+    
+}
+.Efilter{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-around;
+    
+     gap: 50%;
+}
+.Efilter-dropdown{
+  
+
+}
+.Esortbydate{
+
+}
+
+.bigEventsbox{
+    padding-top: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    
+}
