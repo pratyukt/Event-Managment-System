@@ -27,14 +27,14 @@ router.get('/:venueId', async (req, res) => {
 
 // endpoint to create new venue
 router.post('/', upload.single('image'),async (req, res) => {
-    console.log(req.file)
-    const imageUrl = await uploadImage(`./uploads/${req.file.filename}`)
-    fs.unlink(`./uploads/${req.file.filename}`, (err) => {
-        if (err) {
-            console.error(err)
-            return
-        }
-    })
+    // console.log(req.file)
+    // const imageUrl = await uploadImage(`./uploads/${req.file.filename}`)
+    // fs.unlink(`./uploads/${req.file.filename}`, (err) => {
+    //     if (err) {
+    //         console.error(err)
+    //         return
+    //     }
+    // })
     const venue = new Venues({
         name: req.body.name,
         address: req.body.address,
@@ -42,7 +42,7 @@ router.post('/', upload.single('image'),async (req, res) => {
         state: req.body.state,
         zipcode: req.body.zipcode,
         capacity: req.body.capacity,
-        image: imageUrl
+        // image: imageUrl
     });
 
     try {
