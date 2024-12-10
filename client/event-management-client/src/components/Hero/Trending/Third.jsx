@@ -32,9 +32,9 @@ const TrendingColleges=()=>{
                     </Link>
                 ))}
             </div >
-            <div className="loadbutton">
+            {/* <div className="loadbutton">
             <button className="load-more">Load more...</button>
-            </div>
+            </div> */}
             
         </div>
     );

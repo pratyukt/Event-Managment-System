@@ -32,9 +32,9 @@ const UpcomingEvents = () => {
         ))}
       </div>
 
-      <div className="loadbutton">
+      {/* <div className="loadbutton">
         <Link to={"./events"} className="load-more">Load more...</Link>
-      </div>
+      </div> */}
     </div>
   );
 };

@@ -13,8 +13,8 @@ const eventSchema = new mongoose.Schema({
         default: null
     },
     venueid: {
-        type:String,
-        ref:"Venues",
+        type: String,
+        ref: "Venues",
         default: "online",
     },
     createdBy: {
@@ -35,7 +35,10 @@ const eventSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    availableSeats: Number,
+    availableSeats: {
+        type: Number,
+        default: 100
+    },
     bookedSeats: {
         type: Number,
         default: 0
@@ -48,7 +51,7 @@ const eventSchema = new mongoose.Schema({
         type: Date,
         default: new Date()
     }
-})
+});
 
 const Events = mongoose.model('Events', eventSchema);
 
